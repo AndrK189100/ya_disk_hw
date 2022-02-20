@@ -16,7 +16,6 @@ class YaUploader:
 
         with open(file_path, 'rb') as f:
             resp = requests.put(url = upload_url, data = f, timeout = 5)
-        pass
         if resp.status_code == 201:
             return True
         return False
